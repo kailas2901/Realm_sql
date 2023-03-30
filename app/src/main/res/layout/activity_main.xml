@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+
+    <EditText
+        android:id="@+id/course_name"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Course_name"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/cour_dur"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Course Duration"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/cour_track"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Course Track"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/cour_desc"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Course Descripton"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Course"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/disp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="display" />
+</LinearLayout>
