@@ -1,6 +1,7 @@
 package com.example.realm_sql;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context context;
 
     public RecyclerViewAdapter(List<DataModal> dataModalList, Context context) {
+
         this.dataModalList = dataModalList;
         this.context = context;
     }
@@ -28,6 +30,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_course_item,parent,false);
         return new ViewHolder(view);
+
+
     }
 
     @Override
@@ -40,6 +44,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.vh_CourseDescription.setText(modal.getCourseDescription());
         holder.vh_CourseName.setText(modal.getCourseName());;
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,Update_course.class);
+                intent.putExtra("coursename",modal.getCourseName());
+                intent.putExtra("courseduration",modal.getCourseDuration());
+                intent.putExtra("coursetrack",modal.getCourseTracks());
+                intent.putExtra("coursedescription",modal.getCourseDescription());
+                intent.putExtra("id",modal.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
